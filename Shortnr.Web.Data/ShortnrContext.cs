@@ -1,15 +1,13 @@
-﻿using MySql.Data.Entity;
-using Shortnr.Web.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Shortnr.Web.Entities;
 
 namespace Shortnr.Web.Data
 {
-	[DbConfigurationType(typeof(MySqlEFConfiguration))]
 	public class ShortnrContext : DbContext
 	{
 		public ShortnrContext()

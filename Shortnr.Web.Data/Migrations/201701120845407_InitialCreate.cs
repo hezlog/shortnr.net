@@ -12,10 +12,10 @@ namespace Shortnr.Web.Data.Migrations
                 c => new
                     {
                         id = c.Int(nullable: false, identity: true),
-                        long_url = c.String(nullable: false, maxLength: 1000, storeType: "nvarchar"),
-                        segment = c.String(nullable: false, maxLength: 20, storeType: "nvarchar"),
-                        added = c.DateTime(nullable: false, precision: 0),
-                        ip = c.String(nullable: false, maxLength: 50, storeType: "nvarchar"),
+                        long_url = c.String(nullable: false, maxLength: 1000),
+                        segment = c.String(nullable: false, maxLength: 20),
+                        added = c.DateTime(nullable: false),
+                        ip = c.String(nullable: false, maxLength: 50),
                         num_of_clicks = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.id);
@@ -25,9 +25,9 @@ namespace Shortnr.Web.Data.Migrations
                 c => new
                     {
                         id = c.Int(nullable: false, identity: true),
-                        click_date = c.DateTime(nullable: false, precision: 0),
-                        ip = c.String(nullable: false, maxLength: 50, storeType: "nvarchar"),
-                        referer = c.String(maxLength: 500, storeType: "nvarchar"),
+                        click_date = c.DateTime(nullable: false),
+                        ip = c.String(nullable: false, maxLength: 50),
+                        referer = c.String(maxLength: 500),
                         shortUrl_id = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.id)
